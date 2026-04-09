@@ -5,20 +5,20 @@
 class PiiHound < Formula
   desc "pii-hound sniffs out unprotected PII and secrets in your data sources."
   homepage "https://github.com/saddledata/pii-hound"
-  version "0.1.6"
+  version "0.1.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/saddledata/pii-hound/releases/download/v0.1.6/pii-hound_Darwin_x86_64.tar.gz"
-      sha256 "9bb9097ca5c7457c3312c94f35ce9c4de501501460960dd238a19108446863d9"
+      url "https://github.com/saddledata/pii-hound/releases/download/v0.1.7/pii-hound_Darwin_x86_64.tar.gz"
+      sha256 "0d7116c8370e9dcbd4668f3f227a324a963110794f49a0160b32b9d34d63e12d"
 
       define_method(:install) do
         bin.install "pii-hound"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/saddledata/pii-hound/releases/download/v0.1.6/pii-hound_Darwin_arm64.tar.gz"
-      sha256 "a9531d4283f80593d43c3854701f0b5193be27e4696dad9d5f76212044209f46"
+      url "https://github.com/saddledata/pii-hound/releases/download/v0.1.7/pii-hound_Darwin_arm64.tar.gz"
+      sha256 "900e7c25978b80d9717ca0fb0725f8515e1d42254a765c1fdcca50d4df4dc523"
 
       define_method(:install) do
         bin.install "pii-hound"
@@ -28,15 +28,15 @@ class PiiHound < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/saddledata/pii-hound/releases/download/v0.1.6/pii-hound_Linux_x86_64.tar.gz"
-      sha256 "acd4da784ba16e658a9ad962778f243d79d330086bbf929fa5ee783f742f805a"
+      url "https://github.com/saddledata/pii-hound/releases/download/v0.1.7/pii-hound_Linux_x86_64.tar.gz"
+      sha256 "6a421b578e1120e576b73094769bf43a4f3465d43de3673e01d3326b2ec1cc0e"
       define_method(:install) do
         bin.install "pii-hound"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/saddledata/pii-hound/releases/download/v0.1.6/pii-hound_Linux_arm64.tar.gz"
-      sha256 "8b90962c3db716bf3a85ca4d478ca41ef3876b2df20fcd4b0b579ba385d23bc1"
+      url "https://github.com/saddledata/pii-hound/releases/download/v0.1.7/pii-hound_Linux_arm64.tar.gz"
+      sha256 "890022e9405eece9d4b8eb989957eb0f6ca0d39e771f6128e8cd32213bd30afa"
       define_method(:install) do
         bin.install "pii-hound"
       end
